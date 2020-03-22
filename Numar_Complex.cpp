@@ -79,6 +79,7 @@ void elemente(Numar_Complex *v)
         }
     for(int i=0; i<n; i++)
         cout<<v[i];
+    delete[] v;
 }
 double modul(Numar_Complex a)
 {
@@ -146,5 +147,7 @@ void ecuatie(Numar_Complex a,Numar_Complex b,Numar_Complex c,Numar_Complex *rez)
     rez[2]=b.operator*(-1);
     rez[3]=rez[3].operator+(delta[1]);
     rez[3]=rez[3].operator/(num);
+    delete[]rez;
+    delete[]delta;
 
 }
